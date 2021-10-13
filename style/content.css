@@ -1,0 +1,109 @@
+
+.categories .subtitle{
+    padding: 2rem 0;
+}
+
+.categories .subtitle h4 {
+    /* border-bottom: solid 3px var(--red); */
+    width: fit-content;
+    position: relative;
+}
+
+.categories .subtitle h4::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+    background-color: var(--red);
+    box-shadow: 0 0 7px 2px var(--red);
+}
+
+.categories{
+    padding: 0 var(--default-space);
+}
+
+/* Filme Principal */
+.highlighted-movie {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.5) 100%),url('/img/capa-house.jpg');
+
+    height: 400px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: inset 0 0 3rem rgba(0,0,50,0.5);
+}
+
+.highlighted-movie .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.highlighted-movie .titulo {
+    margin-top: 20px;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.highlighted-movie .btn-watch {
+    background-color: rgba(0, 0, 0, .5);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .5s ease all;
+}
+
+.highlighted-movie .btn-watch:hover {
+    background-color: var(--red);
+    box-shadow: 0 0 5rem 0.5rem var(--red);
+}
+
+.highlighted-movie .btn-info {
+    background-color: rgba(0, 0, 0, .5);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .5s ease all;
+}
+
+.highlighted-movie .btn-info:hover {
+    background-color: blue;
+    box-shadow: 0 0 5rem 0.5rem blue;
+}
+.highlighted-movie .btn-info i, .btn-watch i {
+    margin-right: var(--default-space-min);
+}
+
+.highlighted-movie .container {
+    width: 70%;
+}
+
+.container {
+    margin-left: 1.2rem;
+}
+
+
+.item .box-movie {
+    display:block;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.4rem;
+}
+
+.item .box-movie:hover {
+    opacity: 0.6;
+}

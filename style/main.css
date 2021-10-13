@@ -1,0 +1,124 @@
+:root{
+    --red: #e50914;
+    --black:#141414;
+    --default-space-min: 5px;
+    --default-space: 1rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Elementos Base */
+
+body {
+    display: block;
+    min-height: 100vh;
+    background: var(--black);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+header .container .logo{
+    color: var(--red);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a {
+    position: relative; /* Faz com que o efeito aplicado da pseudo-class seja aplicado apenas neste elemento*/
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+
+    transition: color .2s ease-in;
+}
+
+header nav a::after{
+    content: '';
+    display: none;
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: -1;
+    background-color: var(--red);
+    box-shadow: 0 0 5rem 1rem var(--red);
+}
+
+header nav a:hover::after{
+    display: block;
+}
+
+header nav a:hover {
+    /* height: 20px; */
+    color: #FFF;
+    /* border-bottom: solid 3px var(--red) blur(5px); */
+}
+
+main {
+    box-shadow: 0 10px 20px 1px black;
+}
+
+/* Footer of the page */
+footer {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+
+    padding-top: 2rem;
+    margin-top: var(--default-space);
+    box-shadow: inset 0 2rem 1rem  rgb(0, 0, 0, .5);
+}
+
+footer .author{
+    display: flex;
+    place-items: center;
+
+    padding: var(--default-space);
+}
+
+footer .author div{
+    width: 1px;
+    height: 1px;
+    padding: 2px;
+    margin: var(--default-space);
+    border-radius: 50%;
+
+    background-color: darkgray;
+}
+
+footer .github-link i{
+    font-weight: 900;
+    font-size: 2rem;
+    color: lightblue;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem white;
+}
+
+footer .github-link i:hover{
+    opacity: 0.7;
+    /* box-shadow: 0 0 10px 2px lightblue; */
+    animation: move .5s;
+}
+
+@keyframes move {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(.5rem);
+    }
+}

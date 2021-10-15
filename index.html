@@ -24,7 +24,9 @@
 
 <body>
     <div class="player-container">
-        <div id="player"></div>
+        <div id="player">
+            <button type="button" id="btn-close-player" onclick="ClosePlayer(this)">x</button>
+        </div>
     </div>
     <header>
         <div class="container">
@@ -186,10 +188,24 @@
     <script src="js/owl/owl.carousel.min.js"></script>
     <script src="js/setup.js"></script>
     <script>
+        const closeBtn = document.querySelector("#btn-close-player");
+        const showPlayerContainer = document.querySelector(".player-container");
+        const player = document.querySelector('#player');
+
         function ShowPlayer(evt) {
-            document.querySelector(".player-container").style.display = 'flex';
-            document.querySelector('#player').insertAdjacentHTML("afterbegin", "<iframe src='https://www.youtube.com/embed/3f2CYnOgtDU' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope' allowfullscreen></iframe>");
+            showPlayerContainer.style.display = 'flex';
+            closeBtn.style.display = 'flex';
+            player.insertAdjacentHTML("afterbegin", "<iframe src='https://www.youtube.com/embed/3f2CYnOgtDU' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope' allowfullscreen></iframe>");
         };
+
+        function ClosePlayer(evt) {
+            showPlayerContainer.style.display = 'none';
+            if(closeBtn.style.display === 'flex'){
+                closeBtn.style.display = '';
+            }
+            player.innerHTML = '';
+            player.appendChild(closeBtn);
+        }
     </script>
 </body>
 

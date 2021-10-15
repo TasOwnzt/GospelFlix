@@ -35,12 +35,38 @@ body {
 }
 
 #player {
-    position: fixed;
+    display: block;
+    position: relative;
     width: 350px;
     height: 200px;
     background-color: white;
     opacity: 1;
     z-index: 1001;
+}
+
+/* Styling the button close */
+#btn-close-player {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    text-align: center;
+
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 50%;
+
+    background-color: #e50914;
+    font-size: larger;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#btn-close-player:hover{
+    box-shadow: 0 0 .8rem 0.1rem whitesmoke;
 }
 
 iframe {

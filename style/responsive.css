@@ -16,6 +16,11 @@
         text-align: center;
     }
 
+    #player {
+        width: 350px;
+        height: 200px;
+    }
+
     .btn-info, .btn-watch {
         margin-top: 8px;
         width: 300px;

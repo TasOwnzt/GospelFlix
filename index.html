@@ -42,10 +42,13 @@
     <main>
         <div class="highlighted-movie">
             <div class="container">
-                <h3 class="titulo">House of Cards</h3>
-                <p class="descricao">Um político inescrupuloso não mede esforços para conquistar o poder nos EUA neste
-                    drama vencedor do Emmy e do Globo de Ouro. Assista agora a nova temporada de House of Cards que está
-                    imperdível.</p>
+                <h3 class="titulo">Milagres do Paraíso</h3>
+                <p class="descricao">Christy e Kevin Beam são pais de três garotas: Abbie, Annabel e Adelynn.
+                                     Cristãos convictos, os Beams vão à igreja com frequência. 
+                                     Um dia, Annabel começa a sentir fortes dores na região do abdome.
+                                     Após muitos exames, é constatado que a garota possui um grave problema digestivo. 
+                                     Tal situação faz com que Christy busque a todo custo algum meio de salvar a vida da filha, 
+                                     ao mesmo tempo em que se afasta cada vez mais de sua crença em Deus.</p>
                 <div class="btns">
                     <button type="button" name="btn-watch" class="btn-watch" onclick="ShowPlayer(this)">
                         <i class="fas fa-play"></i>
@@ -199,7 +202,7 @@
         };
 
         function ClosePlayer(evt) {
-            showPlayerContainer.style.display = 'none';
+            showPlayerContainer.style.display = '';
             if(closeBtn.style.display === 'flex'){
                 closeBtn.style.display = '';
             }

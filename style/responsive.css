@@ -3,6 +3,7 @@
     /* Limita o tamanho mínimo do body  */
     body {
         min-width: 350px;
+        height: 100vh;
     }
 
     header .container {
@@ -16,6 +17,14 @@
         text-align: center;
     }
 
+    main .highlighted-movie {
+        padding-bottom: 20px;
+    }
+
+    main .highlighted-movie .container {
+        font-size: 80%;
+    }
+
     #player {
         width: 350px;
         height: 200px;
@@ -24,6 +33,16 @@
     .btn-info, .btn-watch {
         margin-top: 8px;
         width: 300px;
+    }
+
+    /* .item .play-info{
+        width: 80%;
+        height: 80%;
+    } */
+
+    .item .play-info button {
+        width: 30%;
+        height: 30%;
     }
 
     footer .author{

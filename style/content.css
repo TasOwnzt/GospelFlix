@@ -28,7 +28,7 @@
 /* Filme Principal */
 .highlighted-movie {
     font-size: 16px;
-    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.5) 100%),url('/img/cape.jpg');
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.5) 100%),url('https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uPt56D7a55ZNn1yJqKWgBHhqJQ3.jpg');
 
     height: 400px;
     background-size: cover;
@@ -41,8 +41,11 @@
 }
 
 .highlighted-movie .descricao {
+    height: 120px;
     margin-top: 10px;
     margin-bottom: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .highlighted-movie .titulo {
@@ -53,10 +56,7 @@
 
 .highlighted-movie .btn-watch {
     background-color: rgba(0, 0, 0, .5);
-    border: none;
     color: white;
-    padding: 15px 30px;
-    margin-right: 15px;
     font-size: 12px;
 
     cursor: pointer;
@@ -70,10 +70,7 @@
 
 .highlighted-movie .btn-info {
     background-color: rgba(0, 0, 0, .5);
-    border: none;
     color: white;
-    padding: 15px 30px;
-    margin-right: 15px;
     font-size: 12px;
 
     cursor: pointer;
@@ -96,14 +93,50 @@
     margin-left: 1.2rem;
 }
 
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.item .box-movie {
-    display:block;
+.item:hover {
+    opacity: 0.6;
+}
+
+.item img {
+    display: inherit;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
     height: 100%;
     width: 100%;
     border-radius: 0.4rem;
 }
+.item .play-info{
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
 
-.item .box-movie:hover {
+    width: 100%;
+    height: 45%;
+}
+
+.item .play-info:hover {
     opacity: 0.6;
+}
+
+.item .play-info button {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-right: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.item .play-info button i{
+    font-size: 5rem;
+    color: rgba(0, 0, 50, .7);
 }

@@ -140,3 +140,8 @@
     font-size: 5rem;
     color: rgba(0, 0, 50, .7);
 }
+
+.item .play-info button i:hover {
+    animation: pulse 1s;
+    /* animation-delay: .5s; */
+}

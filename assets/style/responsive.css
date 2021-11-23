@@ -6,6 +6,10 @@
         height: 100vh;
     }
 
+    #model-info {
+        width: 90%;
+    }
+
     header .container {
         display: flex;
         flex-direction: column;
